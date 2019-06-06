@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <style>
+        .tou {
+            width: 100%;
+            height: 4rem;
+            background-image: url(img/head.png);
+            background-size: cover;
+            position: relative;
+        }
+
+        body {
+            margin: 0rem;
+            padding: 0rem;
+        }
+
+        .tou-yi {
+            position: absolute;
+            top: -0.4rem;
+        }
+
+        .tou-yi img {
+            width: 0.4rem;
+            height: 0.5rem;
+            padding-left: 0.3rem;
+            margin-right: 5.3rem;
+        }
+
+        .tou-yi span {
+            font-size: 0.4rem;
+        }
+
+        .main_form {
+            padding: 0.2rem 0.2rem;
+        }
+
+        .main {
+            width: 6.5rem;
+            height: 5rem;
+            margin-left: 0.35rem;
+            background-color: aliceblue;
+            position: absolute;
+            top: 1.5rem;
+            border-radius: 0.1rem;
+        }
+
+        .form_all h1 {
+            color: red;
+            font-size: 0.3rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .form1 {
+            display: grid;
+        }
+
+        .form1 span {
+            width: 10%;
+            height: 0.8rem;
+            position: absolute;
+            top: 1rem;
+            left: 0.2rem;
+        }
+
+        .form_all img {
+            width: 100%;
+            height: 0.8rem;
+        }
+
+        .tel {
+            width: 5.3rem;
+            height: 0.67rem;
+            position: absolute;
+            top: 1.3rem;
+            left: 0.8rem;
+            background-color: #f1f0f0;
+            border: none
+        }
+
+
+        .list .footer_list li {
+            list-style: none;
+            text-align: center;
+            padding-right: 0.8rem;
+        }
+
+        .list .footer_list li img {
+            width: 0.67rem;
+            height: 0.67rem;
+        }
+
+        .list .footer_list li p {
+            color: #000;
+            font-size: 0.25rem;
+            margin: 0rem;
+
+        }
+
+        .footer_list {
+            display: inline-flex;
+        }
+
+        .li1 {
+            padding-left: 0.2rem;
+        }
+
+        footer h1 {
+            color: #000;
+            font-size: 0.3rem;
+            text-align: center;
+            margin-bottom: -0.8rem;
+            margin-top: 3rem;
+        }
+
+        .form1 p {
+            color: red;
+            position: absolute;
+            right: 0.4rem;
+            font-size: 0.25rem;
+            line-height: 0.8rem;
+            display: none;
+        }
+
+        .form2 img {
+            position: absolute;
+            top: 2.2rem;
+            width: 10%;
+            height: 0.7rem;
+        }
+
+        .psw {
+            width: 3.5rem;
+            height: 0.67rem;
+            position: absolute;
+            top: 2.2rem;
+            left: 0.8rem;
+            background-color: #f1f0f0;
+            border: none;
+        }
+
+        .form2 p {
+            color: red;
+            position: absolute;
+            right: 2.4rem;
+            top: 1.9rem;
+            font-size: 0.25rem;
+            line-height: 0.8rem;
+            display: none;
+        }
+
+        .btn {
+            width: 1.8rem;
+            height: 0.67rem;
+            background-color: #fe5455;
+            background: linear-gradient(to right, #fe5455, #fc7491);
+            color: white;
+            font-size: 0.25rem;
+            text-align: center;
+            line-height: -0.2rem;
+            position: absolute;
+            top: 2.2rem;
+            border: 0rem;
+            left: 4.3rem;
+        }
+
+        .login_btn {
+            width: 5.9rem;
+            height: 0.8rem;
+            background: linear-gradient(to right, #fe5455, #fc7491);
+            background-color: #fe5455;
+            box-shadow: 0 5px 9px #fddae1;
+            border-radius: 0.5rem;
+            color: white;
+            font-size: 0.3rem;
+            text-align: center;
+            outline: none;
+            border: 0;
+            position: absolute;
+            top: 3.3rem;
+        }
+
+        .check {
+            width: 50%;
+            margin: 0 25%;
+            display: inline-flex;
+            position: absolute;
+            top: 4.4rem;
+        }
+
+        .box {
+            width: 0.3rem;
+            height: 0.3rem;
+        }
+
+        .check span {
+            color: #000;
+            font-size: 0.25rem;
+            padding-left: 0.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="tou"></div>
+        <div class="tou-yi"><img src="img/login_back.png"><span>客服</span></div>
+    </div>
+    <div class="main">
+        <div class="main_form">
+            <form class="form_all">
+                <h1>短信快捷登录</h1>
+                <div class="form1">
+                    <span><img src="img/2.png"></span>
+                    <input type="text" class="tel" placeholder="手机号码">
+                    <p class="p1">请输入手机号码</p>
+                </div>
+                <div class="form_text">
+                    <div class="form2">
+                        <span><img src="img/3.png"></span>
+                        <input type="text" class="psw" placeholder="验证码">
+                        <p class="p2">请输入验证码</p>
+                    </div>
+                    <div class="time">
+                        <input type="button" class="btn" value="获取验证码" onclick="settime(this)">
+                    </div>
+                </div>
+                <div class="login">
+                    <input type="button" class="login_btn" value="立即登录&nbsp;/&nbsp;注册">
+                </div>
+                <div class="check">
+                    <input type="checkbox" class="box">
+                    <span>同意扣扣网注册协议</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <h1>其它登录方式</h1>
+        <div class="list">
+            <ul class="footer_list">
+                <li class="li1">
+                    <img src="img/icon-sc1.png">
+                    <p>微信</p>
+                </li>
+                <li>
+                    <img src="img/icon-sc2.png">
+                    <p>淘宝</p>
+                </li>
+                <li>
+                    <img src="img/icon-sc3.png">
+                    <p>腾讯</p>
+                </li>
+                <li>
+                    <img src="img/icon-sc4.png">
+                    <p>微博</p>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+    <script>
+        //倒计时
+        var countdown = 60;
+
+        function settime(val) {
+            if (countdown == 0) {
+                $(".btn").attr("disabled", false) //jq
+                // val.removeAttribute("disabled");//js
+                val.value = "获取验证码";
+                countdown = 60;
+            } else {
+                // val.setAttribute("disabled", true);//js
+                $(".btn").attr("disabled", true) //jq
+                val.value = "重新发送(" + countdown + ")";
+                countdown--;
+                setTimeout(function () {
+                    settime(val)
+                }, 1000)
+            };
+            //jquery写法
+            if (countdown < 50) {
+                $(".btn").css("color", "gold");
+            } else {
+                $(".btn").css("color", "white");
+            }
+        };
+        //手机号
+        $(".tel").blur(function () {
+            var tel = $(".tel").val();
+            if (tel == "" || tel == null) {
+                $(this).next().html('请输入手机号');
+                $(this).next().show();
+                return;
+            } else if (!(/^((\d{3}-\d{8}|\d{4}-\d{7,8})|(1[3|5|7|8][0-9]{9}))$/.test(tel))) {
+                $(this).next().html('请输入11位正确的手机号');
+                $(this).next().show();
+                return;
+            }
+            $(this).next().hide();
+        });
+        //验证码
+        $(".psw").blur(function () {
+            var psw = $(".psw").val();
+            if (psw == "" || psw == null) {
+                $(this).next().html('请输入验证码');
+                $(this).next().show();
+                return;
+            } else if (psw.length >= 1) {
+                $(this).next().html('☑');
+                $(this).next().show();
+                return;
+            }
+            $(this).next().hide();
+        });
+        //登录按钮
+        $(".login_btn").click(function () {
+            var tel = $(".tel").val();
+            var psw = $(".psw").val();
+            if ((tel == "" || tel == null) && (psw == "" || psw == null)) {
+                $(".p1").show();
+                $(".p2").show();
+            } else if (tel == "" || tel == null) {
+                $(".p1").show();
+            } else if (psw == "" || psw == null) {
+                $(".p2").show();
+            };
+            //复选框是否选中
+            if ($(".box").prop("checked")) {
+                $(this).prop("checked", true);
+                // console.log("选中了");
+            } else {
+                $(this).prop("checked", false);
+                alert("请同意注册协议");
+            };
+        });
+    </script>
+</body>
+
+</html>

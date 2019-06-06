@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="top">考勤通&nbsp;·&nbsp;用数据改变未来</div>
+		<div class="content">
+			<div class="login">
+				<div class="title">考勤通登录</div>
+				<div class="line">
+					<img class="smallImg" src="img/icon1.png" />
+					<input placeholder="请输入账号" type="text" class="name"/>
+				</div>
+				<div class="line">
+					<img class="smallImg" src="img/icon2.png" />
+					<input placeholder="请输入密码" type="password" class="pass"/>
+				</div>
+				<button type="button" class="logBut">登&nbsp;&nbsp;录</button>
+			</div>
+        </div>
+        <script>
+            $(".logBut").click(function(){
+                var name = $(".name").val();
+                var pass = $(".pass").val();
+                if(name == ""){
+                    alert("请输入账号")
+                }else if(pass == ""){
+                    alert("请输入密码")
+                }
+            })
+        </script>
+</body>
+</html>
